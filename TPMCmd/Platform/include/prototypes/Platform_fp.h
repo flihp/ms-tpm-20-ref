@@ -42,6 +42,8 @@
 
 //** From Cancel.c 
 
+#include "BaseTypes.h"
+
 //***_plat__IsCanceled()
 // Check if the cancel flag is set
 // return type: BOOL
