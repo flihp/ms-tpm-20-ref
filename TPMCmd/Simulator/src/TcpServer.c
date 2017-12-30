@@ -343,7 +343,7 @@ PlatformSignalService(
 
     return ret;
 }
-#elif
+#else
 #error "Unsupported platform."
 #endif // _MSC_VER
 //*** RegularCommandService()
