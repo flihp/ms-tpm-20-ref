@@ -49,6 +49,10 @@
 #include <winsock.h>
 #endif
 
+#ifdef __unix__
+#define _strcmpi strcasecmp
+#endif
+
 #include "TpmTcpProtocol.h"
 #include "Manufacture_fp.h"
 #include "Platform_fp.h"
