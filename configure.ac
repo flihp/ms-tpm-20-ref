@@ -49,6 +49,7 @@ AX_ADD_COMPILER_FLAG([-Wno-error=empty-body])
 AX_ADD_COMPILER_FLAG([-Wno-error=expansion-to-defined])
 AX_ADD_COMPILER_FLAG([-Wno-error=pointer-to-int-cast])
 AX_ADD_COMPILER_FLAG([-Wno-error=missing-braces])
+AX_ADD_COMPILER_FLAG([-Wno-error=unused-result])
 
 AX_ADD_LINK_FLAG([-Wl,--no-undefined])
 AX_ADD_LINK_FLAG([-Wl,-z,noexecstack])

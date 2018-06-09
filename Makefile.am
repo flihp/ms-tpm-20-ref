@@ -28,9 +28,14 @@ include src.mk
 PLATFORM_INC = -I TPMCmd/Platform/include -I TPMCmd/Platform/include/prototypes
 TPM_INC = -I TPMCmd/tpm/include -I TPMCmd/tpm/include/prototypes
 
+libplatform = TPMCmd/Platform/src/libplatform.a
 libtpm = TPMCmd/tpm/src/libtpm.a
 
-noinst_LIBRARIES = $(libtpm)
+noinst_LIBRARIES = $(libplatform) $(libtpm)
+
+TPMCmd_Platform_src_libplatform_a_CFLAGS = $(EXTRA_CFLAGS) $(PLATFORM_INC) \
+    $(TPM_INC)
+TPMCmd_Platform_src_libplatform_a_SOURCES = $(PLATFORM_C) $(PLATFORM_H)
 
 TPMCmd_tpm_src_libtpm_a_CFLAGS = $(EXTRA_CFLAGS) $(PLATFORM_INC) $(TPM_INC) \
     $(LIBCRYPTO_CFLAGS)
