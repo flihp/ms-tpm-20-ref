@@ -25,10 +25,10 @@
 
 include src.mk
 
-PLATFORM_INC = -I TPMCmd/Platform/include -I TPMCmd/Platform/include/prototypes
-SIMULATOR_INC =  -I TPMCmd/Simulator/include \
-    -I TPMCmd/Simulator/include/prototypes
-TPM_INC = -I TPMCmd/tpm/include -I TPMCmd/tpm/include/prototypes
+PLATFORM_INC = -I$(abs_srcdir)/TPMCmd/Platform/include -I$(abs_srcdir)/TPMCmd/Platform/include/prototypes
+SIMULATOR_INC =  -I$(abs_srcdir)/TPMCmd/Simulator/include \
+    -I$(abs_srcdir)/TPMCmd/Simulator/include/prototypes
+TPM_INC = -I$(abs_srcdir)/TPMCmd/tpm/include -I$(abs_srcdir)/TPMCmd/tpm/include/prototypes
 
 libplatform = TPMCmd/Platform/src/libplatform.a
 libtpm = TPMCmd/tpm/src/libtpm.a
